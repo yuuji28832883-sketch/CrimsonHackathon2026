@@ -13,7 +13,7 @@ url = 'https://www.allrecipes.com/12-vintage-casseroles-you-can-make-in-your-slo
 response = requests.get(url, headers=headers)
 
 if response.status_code == 200:
-    print("Successfully bypassed the blocker!\n")
+    print("Successfully bypassed the blocker!oi\n")
     
     # 3. Parse the raw HTML text using BeautifulSoup
     soup = BeautifulSoup(response.text, 'html.parser')
