@@ -1,16 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unclutter</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unclutter</title>
+  <link rel="stylesheet" href="../static/style.css" />
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar__container">
-            <a href="/" id="navbar__logo">AI Cooking Assistant</a>
+  <header class="topbar">
+    <div class="logo-wrap">
+      <img src="../static/unclutter-logo.png" alt="Unclutter logo" class="logo" />
+      <h1>Unclutter</h1>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- Landing / Info section -->
+    <section id="heroSection" class="panel">
+      <h2>Clean recipes. No fluff.</h2>
+      <p>
+        Paste any cooking recipe URL and Unclutter will pull out the important parts:
+        ingredients, steps, and key details — no ads, no clutter.
+      </p>
+      <p>
+        After that, ask follow-up questions like substitutions, cook time, or serving size.
+      </p>
+    </section>
+
+    <!-- Recipe section (hidden at first) -->
+    <section id="recipeSection" class="panel hidden">
+      <h2 id="recipeTitle">Recipe Title</h2>
+
+      <div class="recipe-grid">
+        <div class="recipe-card">
+          <h3>Ingredients</h3>
+          <ul id="ingredientsList"></ul>
         </div>
-    </nav>
+
+        <div class="recipe-card">
+          <h3>Steps</h3>
+          <ol id="stepsList"></ol>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <h3>Assistant Answers</h3>
+        <div id="answerArea" class="answer-area">
+          Ask a question about this recipe below.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Bottom chat/composer -->
+  <footer class="composer-wrap">
+    <form id="composerForm" class="composer">
+      <input
+        id="composerInput"
+        type="text"
+        placeholder="Paste a recipe URL..."
+        autocomplete="off"
+      />
+      <button id="submitBtn" type="submit">Unclutter</button>
+    </form>
+  </footer>
+
+  <script src="../static/JS/script.js"></script>
 </body>
 </html>
